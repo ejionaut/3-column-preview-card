@@ -117,6 +117,7 @@
       width: 19rem;
       height: fit-content;
       grid-auto-flow: row;
+      margin-top: 5rem;
     }
 
     .car__box{
