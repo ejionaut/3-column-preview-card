@@ -1,0 +1,129 @@
+:root {
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --v-Lgt-gray: hsl(0, 0%, 95%);
+    --v-Drk-cyan: hsl(179, 100%, 13%);
+    --Drk-cyan: hsl(184, 100%, 22%);
+    --Brt-orange: hsl(31, 77%, 52%);
+  }
+
+  * {
+    font-family: 'Lexend Deca';
+    margin: 0;
+    border: 0;
+  }
+
+  body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--Transparent-white);
+    background-color: var(--v-Lgt-gray);
+  }
+
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  .car__container {
+    width: 60rem;
+    height: 35rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .car__box{
+    padding: 3rem;
+  }
+
+  .sedans { 
+    background-color: var(--Brt-orange);
+  }
+
+  .suvs {
+    background-color: var(--Drk-cyan);
+  }
+
+  .luxury {
+    background-color: var(--v-Drk-cyan);
+  }
+
+  .car__box__icon,
+  .car__text__title{
+    margin-bottom: 2rem;
+  }
+
+  .car__text__title{
+    font-family: 'Big Shoulders Display';
+    color: var(--v-Lgt-gray);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+  }
+
+  .car__text__desc{
+    line-height: 1.4rem;
+    width: 14rem;
+    font-weight: lighter;
+    margin-bottom: 7rem;
+  }
+
+  .car__text__btn{
+    width: 70%;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 30rem;
+    background-color: var(--v-Lgt-gray);
+    transition: all 0.17s linear;
+  }
+
+  .sedans .car__text__btn:hover,
+  .suvs .car__text__btn:hover,
+  .luxury .car__text__btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0.1rem solid var(--Transparent-white);
+    color: var(--Transparent-white);
+  }
+
+  .sedans .car__text__btn{
+    color: var(--Brt-orange);
+  }
+
+  .suvs .car__text__btn{
+    color: var(--Drk-cyan);
+  }
+
+  .luxury .car__text__btn{
+    color: var(--v-Drk-cyan);
+  }
+
+
+  .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--v-Drk-cyan);
+  }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+  @media only screen and (max-width: 650px) {
+    body {
+      padding: 10rem 2rem;
+    }
+
+    .car__container{
+      width: 19rem;
+      height: fit-content;
+      grid-auto-flow: row;
+    }
+
+    .car__box{
+      padding: 2rem;
+    }
+
+    .car__text__desc{
+      margin-bottom: 2rem;
+    }
+  }
